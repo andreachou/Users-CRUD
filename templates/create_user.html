@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Users CR - Create</title>
+</head>
+<body>
+    <h1 class="text-center">Add a New User</h1>
+
+    <form action="/user/create" method="POST" class="col-6 mx-auto">
+        <a href="/users" class="btn btn-success my-2">Home</a>
+        <div class="form-group">
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="last_name">Lasst Name:</label>
+            <input type="text" name="last_name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" class="form-control">
+        </div>
+        <input type="submit" value="Create" class="btn btn-primary my-2">
+
+    </form>
+    
+</body>
+</html>

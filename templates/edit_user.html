@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Users CR - Edit</title>
+</head>
+<body>
+    <h1 class="text-center">Edit {{user.first_name}}</h1>
+
+    <form action="/users/{{user.id}}/update" method="POST" class="col-6 mx-auto">
+        <a href="/users" class="btn btn-success my-2">Home</a>
+        <input type="hidden" name="id" value="{{user.id}}"> 
+        <!-- need this to specify id, otherwise update query cannot locate which uesr you want to update -->
+
+        <div class="form-group">
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name" class="form-control" value="{{user.first_name}}"> 
+            <!-- value attribute here is to access the original data and show in the input area on webpage so user can update it -->
+        </div>
+        <div class="form-group">
+            <label for="last_name">Lasst Name:</label>
+            <input type="text" name="last_name" class="form-control" value="{{user.last_name}}">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" class="form-control" value="{{user.email}}">
+        </div>
+        <input type="submit" value="Edit" class="btn btn-primary my-2">
+
+    </form>
+    
+</body>
+</html>

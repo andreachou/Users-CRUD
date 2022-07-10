@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Users CR - Read (One)</title>
+</head>
+<body>
+    <a href="/users" class="btn btn-success my-2">Home</a>
+
+    <h1>User {{ user.id }}</h1>
+    <P>Full Name: {{ user.first_name + " " + user.last_name}} </P>
+    <P>Email: {{ user.email }}</P>
+    <P>Created On: {{ user.created_at }}</P>
+    <P>Last Updated On: {{ user.updated_at }}</P>
+
+    <a href="/users/{{ user.id }}/edit" class="btn btn-secondary my-2">Edit</a>
+    <a href="/user/{{ user.id }}/destroy" class="btn btn-danger my-2">Delete</a> 
+</body>
+</html>
